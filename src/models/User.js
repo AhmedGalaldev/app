@@ -1,26 +1,23 @@
-const Sequelize = require("sequelize");
-const db = require("../database/database");
 
-const User = db.define("user", {
+
+module.exports = (sequelize, DataTypes) => {
+const User = sequelize.define("user", {
   name: {
-    type: Sequelize.STRING,
+    type: DataTypes.STRING,
     allowNull: false,
     validate: {
       len: [3, 20],
     },
   },
   email: {
-    type: Sequelize.STRING,
+    type: DataTypes.STRING,
     allowNull: false,
     unique: true,
   },
   password: {
-    type: Sequelize.STRING,
+    type: DataTypes.STRING,
     allowNull: false,
   },
-  balance: {
-    type: Sequelize.DOUBLE,
-  },
 });
-
-module.exports = User;
+return User
+}

@@ -4,8 +4,9 @@ const bodyParser = require("body-parser");
 require("dotenv").config();
 require("./auth/passport");
 const middlewares = require("./middlewares")
-require("./models/User");
-require("./models/Product")
+
+require("./models")
+
 
 const routes = require("./routes");
 
