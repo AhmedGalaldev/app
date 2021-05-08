@@ -19,19 +19,25 @@ DATABASE_PASSWORD=password
 
 open postman and hit this routes
 
-register
+register (POST method)
 ```bash
 http://localhost:5000/api/register
 ```
-login
+login (POST method)
 ```bash
 http://localhost:5000/api/login
 ```
-products
+products (GET method)
 ```bash
 http://localhost:5000/api/products
 ```
 
-```bash
+Buy Product (POST method)
+```bash 
 http://localhost:5000/api/products/1
 ```
+Cancel operation (POST method)
+```bash 
+http://localhost:5000/api/products/1/canceled
+```
+
